@@ -1,0 +1,35 @@
+{
+  "name": "proj",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {},
+  "keywords": [],
+  "engines": {
+    "node": "0.10.x"
+  },
+  "private": true,
+  "author": "",
+  "homepage": "",
+  "devDependencies": {
+    "coffee-jsx-loader": "*",
+    "coffee-react": "^2.1.2",
+    "webpack": "^1.4.15",
+    "chai": "^1.9.1",
+    "coffee-loader": "*",
+    "coffee-script": "~1.8.0",
+    "css-loader": "*",
+    "exports-loader": "*",
+    "imports-loader": "*",
+    "karma": "^0.12.23",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-mocha": "^0.1.9",
+    "karma-webpack": "^1.2.2",
+    "mocha": "^1.21.4",
+    "raw-loader": "*",
+    "style-loader": "*"
+  },
+  "dependencies": {
+    "react": "^0.12.2"
+  }
+}
