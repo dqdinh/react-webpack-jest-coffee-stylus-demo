@@ -2,8 +2,12 @@
   "name": "proj",
   "version": "0.0.0",
   "description": "",
-  "scripts": {},
   "keywords": [],
+  "jest": {
+   "scriptPreprocessor": "<rootDir>/preprocessor.js",
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"],
+    "testFileExtensions": ["coffee", "js"]
+  },
   "engines": {
     "node": "0.10.x"
   },
@@ -11,15 +15,16 @@
   "author": "",
   "homepage": "",
   "devDependencies": {
-    "coffee-jsx-loader": "*",
-    "coffee-react": "^2.1.2",
-    "webpack": "^1.4.15",
     "chai": "^1.9.1",
+    "coffee-jsx-loader": "*",
     "coffee-loader": "*",
+    "coffee-react": "^2.1.2",
     "coffee-script": "~1.8.0",
     "css-loader": "*",
     "exports-loader": "*",
     "imports-loader": "*",
+    "jade": "^1.9.0",
+    "jest-cli": "^0.2.1",
     "karma": "^0.12.23",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.4",
@@ -27,9 +32,22 @@
     "karma-webpack": "^1.2.2",
     "mocha": "^1.21.4",
     "raw-loader": "*",
-    "style-loader": "*"
+    "style-loader": "*",
+    "stylus": "^0.49.3",
+    "webpack": "^1.4.15",
+    "webpack-dev-server": "^1.7.0"
   },
   "dependencies": {
     "react": "^0.12.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "dev": "npm run jade & npm run stylus",
+    "prod": "npm run jade-prod & npm run stylus-prod",
+    "jade": "jade --watch ./src/html/*.jade --pretty --out ./build",
+    "jade-prod": "jade --watch ./src/html/*.jade --out ./dist",
+    "stylus": "stylus --watch ./src/styles/*.styl --out ./build",
+    "stylus-prod": "stylus --watch ./src/styles/*.styl --out ./dist.",
+    "webpack": "webpack"
   }
 }
